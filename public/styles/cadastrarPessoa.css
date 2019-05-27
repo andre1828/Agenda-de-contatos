@@ -1,0 +1,35 @@
+.section-header {
+  display: flex;
+}
+
+.section-header button {
+  margin-left: 50px;
+  width: 130px;
+  height: 40px;
+  align-self: center;
+}
+
+.botao-fim-cadastro {
+  margin: 5px 0px;
+}
+
+.mensagem-sem-contatos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.mensagem-sem-contatos i {
+  font-size: 5em;
+}
+
+.contato {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.acoes-pagina {
+    padding-left: 5%;
+}

@@ -1,0 +1,121 @@
+{{ style('https://use.fontawesome.com/releases/v5.8.2/css/all.css"') }}
+{{ style("styles/global") }}
+{{ style("styles/cadastrarPessoa") }}
+<h1>Nova Pessoa</h1>
+
+<section>
+  <label for="pessoaNome">
+    <span>Nome *</span>
+    <input type="text" id="pessoaNome" autocomplete="off" />
+  </label>
+  <label for="pessoaMarcador">
+    <span>Marcador</span>
+    <select name="marcador" id="pessoaMarcador" autocomplete="off">
+      <option value="0">Selecione um marcador</option>
+      <option value="1">Trabalho</option>
+      <option value="2">Família</option>
+      <option value="3">Amigos</option>
+    </select>
+  </label>
+</section>
+<section>
+  <div class="section-header">
+    <h3>Contatos</h3>
+    <button id="adicionarContato">Adicionar contato</button>
+  </div>
+  <select
+    name="novoContatoTipo"
+    id="novoContatoTipo"
+    style="display: none"
+    autocomplete="off"
+  >
+    <option value="0">Selecione um tipo de contato</option>
+    <option value="1">E-mail</option>
+    <option value="2">Celular</option>
+    <option value="3">Telefone Fixo</option>
+    <option value="4">Site</option>
+  </select>
+  <input
+    type="text"
+    id="novoContatoValor"
+    style="display: none"
+    autocomplete="off"
+  />
+  <button
+    id="confirmarNovoContato"
+    class="botao-fim-cadastro"
+    style="display: none"
+    disabled
+  >
+    Confirmar novo contato
+  </button>
+  <button
+    id="cancelarNovoContato"
+    class="botao-fim-cadastro"
+    style="display: none"
+  >
+    Cancelar
+  </button>
+  <div class="contatos">
+    <div class="mensagem-sem-contatos">
+      <i class="far fa-address-book"></i>
+      <p>Seus contatos aparecerão aqui</p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="section-header">
+    <h3>Endereços</h3>
+    <button id="adicionarEndereco">Adicionar endereço</button>
+  </div>
+  <label for="novoEnderecoLogradouro" style="display:none">
+    <span>Logradouro *</span>
+    <input type="text" id="novoEnderecoLogradouro" autocomplete="off" />
+  </label>
+  <label for="novoEnderecoNumero" style="display:none">
+    <span>Número</span>
+    <input type="number" id="novoEnderecoNumero" autocomplete="off" />
+  </label>
+  <label for="novoEnderecoComplemento" style="display:none">
+    <span>Complemento</span>
+    <input type="text" id="novoEnderecoComplemento" autocomplete="off" />
+  </label>
+  <label for="novoEnderecoTipo" style="display:none">
+    <span>Tipo de endereço</span>
+    <select name="novoEnderecoTipo" id="novoEnderecoTipo" autocomplete="off">
+      <option value="0">Selecione um tipo de endereço</option>
+      <option value="1">Residencial</option>
+      <option value="2">Comercial</option>
+    </select>
+  </label>
+  <label for="novoEnderecoBairro" style="display:none">
+    <span>Bairro</span>
+    <input type="text" id="novoEnderecoBairro" autocomplete="off" />
+  </label>
+  <label for="novoEnderecoCidade" style="display:none">
+    <span>Cidade</span>
+    <input type="text" id="novoEnderecoCidade" autocomplete="off" />
+  </label>
+  <label for="novoEnderecoEstado" style="display:none">
+    <span>Estado</span>
+    <input type="text" id="novoEnderecoEstado" autocomplete="off" />
+  </label>
+  <button
+    id="confirmarNovoEndereco"
+    class="botao-fim-cadastro"
+    style="display: none"
+  >
+    Confirmar novo endereço
+  </button>
+  <button
+    id="cancelarNovoEndereco"
+    class="botao-fim-cadastro"
+    style="display: none"
+  >
+    Cancelar
+  </button>
+</section>
+<div class="acoes-pagina">
+    <button id="voltar" >Voltar</button> <button id="cadastrarPessoa">Cadastrar</button>
+</div>
+{{ script("/scripts/cadastrarPessoa") }}

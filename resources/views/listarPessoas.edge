@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agenda de Contatos</title>
+    {{style("styles/global.css")}}
+    {{style("styles/listarPessoas.css")}}
+  </head>
+  <body>
+    <section>
+      <h1>Contatos</h1>
+
+      <button id="irParaCadastrarPessoa">Cadastrar pessoa</button>
+
+      @each(pessoa in pessoas)
+      <div class="pessoa">
+        <p>{{ pessoa.nome }}</p>
+        <p>{{ pessoa.marcador }}</p>
+      </div>
+      @endeach
+    </section>
+    {{ script("/scripts/index") }}
+    {{ script("/scripts/listarPessoas") }}
+  </body>
+</html>
